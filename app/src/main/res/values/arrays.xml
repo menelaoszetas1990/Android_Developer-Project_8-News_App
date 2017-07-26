@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="menu_array">
+        <item>@string/world</item>
+        <item>@string/UK</item>
+        <item>@string/US</item>
+        <item>@string/business</item>
+        <item>@string/environment</item>
+        <item>@string/money</item>
+        <item>@string/technology</item>
+        <item>@string/science</item>
+        <item>@string/travel</item>
+        <item>@string/culture</item>
+        <item>@string/lifestyle</item>
+        <item>@string/fashion</item>
+        <item>@string/sport</item>
+    </string-array>
+
+    <string-array name="settings_order_by_labels">
+        <item>@string/settings_order_by_relevance_label</item>
+        <item>@string/settings_order_by_newest_label</item>
+        <item>@string/settings_order_by_oldest_label</item>
+    </string-array>
+
+    <string-array name="settings_order_by_values">
+        <item>@string/settings_order_by_relevance_value</item>
+        <item>@string/settings_order_by_newest_value</item>
+        <item>@string/settings_order_by_oldest_value</item>
+    </string-array>
+</resources>
