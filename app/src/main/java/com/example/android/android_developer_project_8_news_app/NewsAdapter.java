@@ -10,7 +10,7 @@ import android.widget.TextView;
 import java.util.List;
 
 /**
- * An {@link NewsAdapter} knows how to create a list item layout for each earthquake
+ * An {@link NewsAdapter} knows how to create a list item layout for each news
  * in the data source (a list of {@link News} objects).
  * <p>
  * These list item layouts will be provided to an adapter view like ListView
@@ -22,7 +22,7 @@ public class NewsAdapter extends ArrayAdapter<News> {
      * Constructs a new {@link NewsAdapter}.
      *
      * @param context of the app
-     * @param news    is the list of earthquakes, which is the data source of the adapter
+     * @param news    is the list of news, which is the data source of the adapter
      */
     public NewsAdapter(Context context, List<News> news) {
         super(context, 0, news);
@@ -53,7 +53,7 @@ public class NewsAdapter extends ArrayAdapter<News> {
         TextView sectionNameView = (TextView) listItemView.findViewById(R.id.section_name);
         // get the section name
         String sectionName = currentNews.getSection();
-        // Display the location of the current earthquake in that TextView
+        // Display the location of the current news in that TextView
         sectionNameView.setText(sectionName);
 
 
@@ -61,14 +61,19 @@ public class NewsAdapter extends ArrayAdapter<News> {
         TextView dateView = (TextView) listItemView.findViewById(R.id.date);
         // Format the date string (i.e. "Mar 3, 1984")
         String date = currentNews.getDatePublished();
-        // date formation
-        String time = date.substring(11, 16);
-        date = date.substring(0, 10);
-        date = "Date: " + date + " Time: " + time;
-        // Display the date of the current earthquake in that TextView
-        dateView.setText(date);
+        // Display the date of the current news in that TextView
+        dateView.setText(dateFormation(date));
 
         // Return the list item view that is now showing the appropriate data
         return listItemView;
     }
+
+    private String dateFormation (String date) {
+        // date formation
+        String time = date.substring(11, 16);
+        date = date.substring(0, 10);
+        date = "Date: " + date + " Time: " + time;
+        return date;
+    }
+
 }

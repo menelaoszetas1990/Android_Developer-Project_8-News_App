@@ -1,19 +1,19 @@
 package com.example.android.android_developer_project_8_news_app;
 
-// An {@link News} object contains information related to a single earthquake.
+// An {@link News} object contains information related to a single news.
 public class News {
 
     // title of the news
-    private String mTitle;
+    private final String mTitle;
 
     // section name
-    private String mSectionName;
+    private final String mSectionName;
 
     // date published
-    private String mDatePublished;
+    private final String mDatePublished;
 
     // Website URL of the news
-    private String mUrl;
+    private final String mUrl;
 
     /**
      * Constructs a new {@link News} object.
@@ -49,4 +49,5 @@ public class News {
     public String getUrl() {
         return mUrl;
     }
+
 }
